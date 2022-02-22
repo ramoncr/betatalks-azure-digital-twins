@@ -1,0 +1,29 @@
+{
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ],
+    "@type": "Interface",
+    "@id": "dtmi:ramon:geolocation;1",
+    "displayName": "Geolocation",
+    "description": "A geolocation",
+    "contents": [
+        {
+            "@type": ["Property", "Latitude"],
+            "name": "lat",
+            "schema": "double",
+            "unit": "degreeOfArc"
+        },
+        {
+            "@type": ["Property", "Longitude"],
+            "name": "long",
+            "schema": "double",
+            "unit": "degreeOfArc"
+        },
+        {
+            "@type": ["Property","Distance"],
+            "name": "alt",
+            "schema": "double",
+            "unit": "metre"
+        }
+    ]
+}

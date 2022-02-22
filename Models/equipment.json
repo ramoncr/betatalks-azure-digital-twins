@@ -1,0 +1,36 @@
+{
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ],
+    "@type": "Interface",
+    "@id": "dtmi:ramon:equipment;1",
+    "displayName": "Equipment",
+    "description": "Physical equipment",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "serialNo",
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "name",
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "vendor",
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "type",
+            "schema": "string"
+        },
+        {
+            "@type": "Relationship",
+            "name": "locatedIn",
+            "description": "Links the equipment to the location"
+        }
+    ]
+}

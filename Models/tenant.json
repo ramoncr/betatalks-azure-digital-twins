@@ -1,0 +1,16 @@
+{
+    "@type": "Interface",
+    "@id": "dtmi:ramon:tenant;1",
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ],
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "name",
+            "schema": "string",
+            "displayName": "Name",
+            "description": "The name of the tenant"
+        }
+    ]
+}

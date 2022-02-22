@@ -1,0 +1,28 @@
+{
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ],
+    "extends": [
+        "dtmi:ramon:sensor;1"
+    ],
+    "@type": "Interface",
+    "@id": "dtmi:ramon:sensor:humidity;1",
+    "displayName": "Humidity sensor",
+    "description": "A physical humidity sensor",
+    "contents": [
+        {
+            "@type": [
+                "Property",
+                "RelativeHumidity"
+            ],
+            "name": "latestValue",
+            "schema": "double",
+            "unit": "percent"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "humidity",
+            "schema": "double"
+        }
+    ]
+}

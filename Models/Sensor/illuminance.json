@@ -1,0 +1,28 @@
+{
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ],
+    "extends": [
+        "dtmi:ramon:sensor;1"
+    ],
+    "@type": "Interface",
+    "@id": "dtmi:ramon:sensor:illuminance;1",
+    "displayName": "Illuminance sensor",
+    "description": "A physical illuminance sensor",
+    "contents": [
+        {
+            "@type": [
+                "Property",
+                "Illuminance"
+            ],
+            "name": "latestValue",
+            "schema": "double",
+            "unit": "lux"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "illuminance",
+            "schema": "double"
+        }
+    ]
+}

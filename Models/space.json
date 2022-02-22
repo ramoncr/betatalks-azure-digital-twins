@@ -1,0 +1,99 @@
+{
+    "@type": "Interface",
+    "@id": "dtmi:ramon:space;1",
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ],
+    "displayName": "Space",
+    "description": "A physical space",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "name",
+            "schema": "string",
+            "description": "Name of the space",
+            "displayName": "Name"
+        },
+        {
+            "@type": "Property",
+            "name": "type",
+            "schema": "string",
+            "description": "The type describing the space",
+            "displayName": "Type"
+        },
+        {
+            "@type": "Property",
+            "name": "subType",
+            "schema": "string",
+            "description": "The sub type of the type describing the space",
+            "displayName": "Sub Type"
+        },
+        {
+            "@type": [
+                "Property",
+                "Area"
+            ],
+            "name": "surfaceArea",
+            "schema": "double",
+            "unit": "squareMetre",
+            "description": "The surface area of the space",
+            "displayName": "Surface Area"
+        },
+        {
+            "@type": [
+                "Property",
+                "Temperature"
+            ],
+            "name": "temperature",
+            "schema": "double",
+            "unit": "degreeCelsius",
+            "displayName": "Temperature",
+            "description": "The latest measured temperature in this space"
+        },
+        {
+            "@type": [
+                "Property",
+                "RelativeHumidity"
+            ],
+            "name": "humidity",
+            "schema": "double",
+            "unit": "percent",
+            "displayName": "Humidity",
+            "description": "The latest measured humidity in this space"
+        },
+        {
+            "@type": [
+                "Property",
+                "Illuminance"
+            ],
+            "name": "illuminance",
+            "schema": "double",
+            "unit": "lux",
+            "displayName": "Illuminance",
+            "description": "The latest measured illuminance in this space"
+        },
+        {
+            "@type": "Relationship",
+            "name": "measuredBy",
+            "displayName": "measured by",
+            "description": "The link to a sensor measuring data for this space",
+            "target": "dtmi:ramon:sensor;1"
+        },
+        {
+            "@type": "Relationship",
+            "name": "leasedBy",
+            "description": "Describes the relationships to a company occupying the space",
+            "target": "dtmi:ramon:tenant;1",
+            "displayName": "leased by",
+            "properties": [
+                {
+                    "@type": "Property",
+                    "name": "contractId",
+                    "schema": "string",
+                    "displayName": "Contract ID",
+                    "description": "The id of the contract describing the lease"
+                }
+            ]
+        }
+    ]
+}

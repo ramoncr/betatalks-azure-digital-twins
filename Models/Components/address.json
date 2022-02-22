@@ -1,0 +1,37 @@
+{
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ],
+    "@type": "Interface",
+    "@id": "dtmi:ramon:address;1",
+    "displayName": "Address",
+    "description": "A geolocation",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "country",
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "city",
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "state",
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "address",
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "postalCode",
+            "schema": "string",
+            "displayName": "Zip/Postalcode"
+        }
+    ]
+}

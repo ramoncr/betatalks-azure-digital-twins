@@ -1,0 +1,36 @@
+{
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ],
+    "@type": "Interface",
+    "@id": "dtmi:ramon:sensor;1",
+    "displayName": "Sensor",
+    "description": "A physical sensor",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "serialNo",
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "type",
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "tags",
+            "schema": {
+                "@type": "Map",
+                "mapKey": {
+                    "name": "name",
+                    "schema": "string"
+                },
+                "mapValue": {
+                    "name": "value",
+                    "schema": "string"
+                }
+            }
+        }
+    ]
+}

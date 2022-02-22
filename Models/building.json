@@ -1,0 +1,95 @@
+{
+    "@type": "Interface",
+    "@id": "dtmi:ramon:building;1",
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ],
+    "displayName": "Building",
+    "description": "A physical building",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "name",
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "type",
+            "schema": {
+                "@type": "Enum",
+                "displayName": "Type",
+                "description": "Type of the building",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "Office",
+                        "enumValue": "office",
+                        "displayName": "Office",
+                        "description": "A office building"
+                    },
+                    {
+                        "name": "Apartments",
+                        "enumValue": "apartments",
+                        "displayName": "Apartments",
+                        "description": "A appartment building"
+                    },
+                    {
+                        "name": "Retail",
+                        "enumValue": "retail",
+                        "displayName": "Retail",
+                        "description": "A retail building"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": [
+                "Property",
+                "Area"
+            ],
+            "name": "surfaceArea",
+            "schema": "double",
+            "unit": "squareMetre"
+        },
+        {
+            "@type": "Component",
+            "schema": "dtmi:ramon:geolocation;1",
+            "name": "geolocation"
+        },
+        {
+            "@type": "Property",
+            "name": "address",
+            "schema": {
+                "@type": "Object",
+                "fields": [
+                    {
+                        "name": "country",
+                        "schema": "string"
+                    },
+                    {
+                        "name": "city",
+                        "schema": "string"
+                    },
+                    {
+                        "name": "state",
+                        "schema": "string"
+                    },
+                    {
+                        "name": "address",
+                        "schema": "string"
+                    },
+                    {
+                        "name": "postalCode",
+                        "schema": "string",
+                        "displayName": "Zip/Postalcode"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Relationship",
+            "name": "consistsOf",
+            "target": "dtmi:ramon:floor;1"
+        }
+    ]
+}

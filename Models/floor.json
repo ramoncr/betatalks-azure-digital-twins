@@ -1,0 +1,31 @@
+{
+   
+    "@type": "Interface",
+    "@id": "dtmi:ramon:floor;1",
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ],
+    "displayName": "Floor",
+    "description": "A physical floor",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "name",
+            "schema": "string"
+        },
+        {
+            "@type": [
+                "Property",
+                "Area"
+            ],
+            "name": "surfaceArea",
+            "schema": "double",
+            "unit": "squareMetre"
+        },
+        {
+            "@type": "Relationship",
+            "name": "contains",
+            "target": "dtmi:ramon:space;1"
+        }
+    ]
+}

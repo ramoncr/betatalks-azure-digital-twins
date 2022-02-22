@@ -1,0 +1,24 @@
+{
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ],
+    "extends": [
+        "dtmi:ramon:equipment;1"
+    ],
+    "@type": "Interface",
+    "@id": "dtmi:ramon:equipment:display;1",
+    "displayName": "Display",
+    "description": "A display",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "modelName",
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "leased",
+            "schema": "boolean"
+        }
+    ]
+}

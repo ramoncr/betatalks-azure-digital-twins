@@ -1,0 +1,28 @@
+{
+    "@context": [
+        "dtmi:dtdl:context;2"
+    ],
+    "extends": [
+        "dtmi:ramon:sensor;1"
+    ],
+    "@type": "Interface",
+    "@id": "dtmi:ramon:sensor:temperature;1",
+    "displayName": "Temperature sensor",
+    "description": "A physical temperature sensor",
+    "contents": [
+        {
+            "@type": [
+                "Property",
+                "Temperature"
+            ],
+            "name": "latestValue",
+            "schema": "double",
+            "unit": "degreeCelsius"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "temperature",
+            "schema": "double"
+        }
+    ]
+}
